@@ -16,30 +16,47 @@
     {{-- font Awesome --}}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/fontawesome.min.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/css/all.min.css" />
-    {{-- Own Css --}}
-    <link rel="icon" href="{{ url('Logo.svg') }}">
     {{-- Logo --}}
-    <link rel="stylesheet" type="text/css" href="{{ url('../asset/css/app.css') }}">
-    <title>Ecommerce Project</title>
+    <link rel="icon" href="{{url('../img/Logo.svg')}}">
+
+    <title>SRUNNOOBIE Store</title>
 </head>
 <body>
     {{View::make('header')}}
     @yield("content")
     {{View::make('footer')}}
 </body>
-
 {{-- style Css --}}
 <style>
-    .btn btn-primary{
-        gap: 1rem;
-    }
-    .custom-login{
+    .customer-login{
         height: 500px;
-        padding-top: 100px;
+        padding-top:100px
     }
-    .text-decoration{
-        text-decoration: none;
+    img.slider-img{
+        height: 400px !important;
     }
+    .customer-product{
+        height: 600px;
+    }
+    .trending-image{
+        height: 100px;
+    }
+    .trending-item{
+        float: left;
+        width: 20%;
+    }
+    .trending-wrapper{
+        margin: 30px
+    }
+    .detail-img{
+        height: 200px;
+    }
+    .cart-list-devider{
+        border-bottom: 1px solid #35443585;
+        margin-bottom: 20px;
+        padding-bottom: 20px
+    }
+
 </style>
 
 {{-- <script>
