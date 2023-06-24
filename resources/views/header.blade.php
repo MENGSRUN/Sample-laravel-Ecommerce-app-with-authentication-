@@ -41,11 +41,13 @@ if (Session::has('user')) {
             @else
                 <ul class="navbar-nav ">
                     <li class="nav-item">
-                      <a class="nav-link action fw-bold" aria-current="page" href="/login" style="font-size: 23px;">Login</a>
+                      <a class="nav-link action fw-bold" aria-current="page" href="/login" style="font-size: 20px;">Login</a>
+                    </li>
+                    <li class="nav_item">
+                        <a class="nav-link action fw-bold" aria-current="page" href="/register" style="font-size: 20px;">Register</a>
                     </li>
                 </ul>
             @endif
-
             {{-- Cart btn --}}
             <ul class="navbar-nav navbar-right">
                 <li class="nav-item btn btn-primary ">

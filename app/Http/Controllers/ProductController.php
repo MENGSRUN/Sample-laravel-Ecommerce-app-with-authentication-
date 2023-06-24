@@ -99,11 +99,11 @@ class ProductController extends Controller
     function myOders()
     {
         $userId=Session::get('user')['id'];
-        $total= $products=DB::table('cart')
-        ->join('products', 'cart.product_id', '=', 'products.id')
-        ->where('cart.user_id',$userId)
-        ->sum('products.price');
+        $orders= DB::table('orders')
+        ->join('products', 'orders.product_id', '=', 'products.id')
+        ->where('orders.user_id',$userId)
+        ->get();
 
-        return view('ordernow',['total'=>$total]);
+        return view('myorders',['orders'=>$orders]);
     }
 }

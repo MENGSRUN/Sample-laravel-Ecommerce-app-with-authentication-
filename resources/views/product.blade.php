@@ -23,18 +23,31 @@
         </div>
 
         {{-- Trending Product --}}
-        <div class="trending-wrapper">
-            <h3>Trending Products</h3>
-            @foreach ($products as $item)
-                <div class="trending-item">
-                    <a href="detail/{{ $item['id'] }}">
-                        <img src="{{ $item['gallery'] }}" class="trending-image" alt="slide">
-                        <div class="">
-                            <h6>{{ $item['name'] }}</h6>
-                        </div>
-                    </a>
-                </div>
-            @endforeach
-        </div>
+        <h3 style="text-align: center;">Trending Products</h3>
         <hr>
-@endsection
+        <div class="container">
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                @foreach ($products as $item)
+                    <div class="col-sm-3">
+                        <div class="card">
+                            <div class="card-body">
+                                <a href="detail/{{ $item['id'] }}">
+                                    <img src="{{ $item['gallery'] }}"class="bd-placeholder-img card-img-top" alt="slide">
+                                    <div class="text-reset">
+                                        <h5 class="card-title mb-3">{{ $item['name'] }}</h5>
+                                    </div>
+                                </a>
+                                {{-- category --}}
+                                <div class="card-body">
+                                    <h6 class="card-text">{{ $item['description'] }}</h6>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <h3 class="text-muted">{{ $item['price'] }} $</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                @endforeach
+            </div>
+        </div>
+    @endsection

@@ -24,7 +24,7 @@
 <body>
     {{View::make('header')}}
     @yield("content")
-    {{View::make('footer')}}
+    {{View::make('footer')}} 
 </body>
 {{-- style Css --}}
 <style>
@@ -39,7 +39,7 @@
         height: 600px;
     }
     .trending-image{
-        height: 100px;
+        height: 300px;
     }
     .trending-item{
         float: left;
