@@ -8,6 +8,9 @@ use App\Models\Order;
 use Session;
 use Illuminate\Support\Facades\DB;
 
+
+use App\Http\Controllers\Response;
+
 // use Illuminate\Http\Request;
 
 class ProductController extends Controller
@@ -44,6 +47,8 @@ class ProductController extends Controller
     {
         $userId=Session::get('user')['id'];
         return Cart::where('user_id', $userId)->count();
+        // return Response::json($userId);
+
     }
 
     function cartList()

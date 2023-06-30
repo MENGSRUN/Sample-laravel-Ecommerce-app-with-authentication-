@@ -16,7 +16,7 @@
                     <th scope="row">Delivery</th>
                     <td colspan="2">10 $</td>
                   </tr>
-                  <tr>
+                  <tr> 
                     <th scope="row">Total Amount</th>
                     <td colspan="2">{{$total +10}} $</td>
                   </tr>
@@ -36,7 +36,7 @@
                     <input class="form-check-input me-3" type="radio" value="cash" name="payment"><span>Payment On Delivery</span><br><br>
 
                 </div>
-                <div class="caontainer mx-auto">
+                <div class="mx-auto">
                     <a  class="btn btn-danger" href="/">Go Back</a>
                     <button type="sumit" class="btn btn-primary"> Order Now</button>
                 </div>
