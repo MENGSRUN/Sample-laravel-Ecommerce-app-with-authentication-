@@ -30,7 +30,7 @@
         <hr>
         {{-- Trending Product --}}
         <div class="col-sm mx-auto">
-            <h3 class="text-muted">Trending Products</h3>
+            <h3 class="text-center text-muted">Trending Products</h3>
         </div>
         <hr>
         <div class="container">
