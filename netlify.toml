@@ -1,2 +1,5 @@
 [build]
   publish = "public"
+
+[functions]
+  directory = "my_functions"
