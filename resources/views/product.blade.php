@@ -23,7 +23,8 @@
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
             </button>
-            <button class="carousel-control-next btn-danger" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+            <button class="carousel-control-next btn-danger" type="button" data-bs-target="#carouselExampleFade"
+                data-bs-slide="next">
             </button>
         </div>
         {{-- ================================================ --}}
@@ -34,24 +35,51 @@
         </div>
         <hr>
         <div class="container">
-            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+            <div class="row row-cols-2 row-cols-sm-2 row-cols-md-3 g-3 ">
                 @foreach ($products as $item)
                     <div class="col-sm">
                         <div class="card shadow-sm">
                             <a href="detail/{{ $item['id'] }}">
-                                <img src="{{ $item['gallery'] }}"class="bd-placeholder-img card-img-top" alt="slide">
+                                <img src="{{ $item['gallery'] }}" width="144px" class="bd-placeholder-img card-img-top" alt="slide">
                                 <div class="card-body ">
                                     <h5 class="card-title mb-3 text-decoration-none">{{ $item['name'] }}</h5>
-                                    <p class="card-text text text-decoration-none">{{ $item['description'] }}</p>
+                                    <p class="card-text text text-decoration-none">{{ $item['category'] }}</p>
                                     <div class="d-flex justify-content-between align-items-center">
-                                    <h6 class="text-muted">{{ $item['price'] }} $</h6>
+                                        <h6 class="text-muted">{{ $item['price'] }} $</h6>
                                     </div>
                                 </div>
                             </a>
                         </div>
-                      </div>
+                    </div>
                 @endforeach
             </div>
         </div>
-    @endsection
 
+        {{-- Test Proct show --}}
+        {{-- <div class="container ">
+            <div class="row row-col-4">
+                <div class="col-sm">
+                    @foreach ($products as $item)
+                        <div class="card" width: 18rem; margin-top: 20px;>
+                            <a href="detail/{{ $item['id'] }}">
+                                <img src="{{ $item['gallery'] }}" height="144" style="padding-top: 13px;">
+                                <div class="card-body">
+                                    <h5 class="card-title">{{ $item['name'] }}</h5>
+                                    <p class="card-text">{{ $item['category'] }}</p>
+                                    <div class="row row-cols-2 ">
+
+                                    </div>
+
+                                </div>
+                            </a>
+                            <div class="card-footer">
+                                <small class="text" style="color: whitesmoke ;">{{ $item['price'] }} $</small>
+                            </div>
+
+
+                        </div>
+                    @endforeach
+                </div>
+            </div>
+        </div> --}}
+    @endsection

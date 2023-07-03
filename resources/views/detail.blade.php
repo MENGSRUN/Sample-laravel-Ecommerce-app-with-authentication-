@@ -5,6 +5,7 @@
     <div class="container custom-product">
         <div class="row featurette">
             <a href="/"><button class="btn btn-danger">Go Back</button></a>
+            <br>
             <div class="col-sm order-md-1">
                 <img src="{{$products['gallery']}}" alt="Product Image" width="400px">
             </div>
@@ -21,9 +22,9 @@
                 </form>
                 <br>
                 <br>
-                <form class="d-flex col-sm">
+                {{-- <form class="d-flex col-sm">
                     <button class="btn btn-success">Buy Now</button>
-                </form>
+                </form> --}}
                 <br>
             </div>
         </div>

@@ -15,7 +15,7 @@
             @foreach ($products as $item)
             <div class=" row cart-list-devider">
                 <div class="col-sm mx-auto">
-                        <img class="trending-image" src="{{$item->gallery}}">
+                        <img class="trending-image" src="{{$item->gallery}}" alt="Cart List Image">
                 </div>
                 <div class="col-sm">
                         <div class="">
