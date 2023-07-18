@@ -5,7 +5,7 @@ if (Session::has('user')) {
     $total = ProductController::cartItem();
 }
 ?>
-
+<div><h1>hello wolrd</h1></div>
 <div class="container">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
